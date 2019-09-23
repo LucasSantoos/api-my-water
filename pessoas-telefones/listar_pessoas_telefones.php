@@ -5,29 +5,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Cidades</title>
+		<title>Telefones</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
-		<br><br><a href="cadastrar_cidades.php">Cadastrar</a>
+		<br><br><a href="cadastrar_pessoas_telefones.php">Cadastrar</a>
 		<table>
 			<thead>
 				<tr>
 					<th>Código</th>
-					<th>Descrição</th>
-					<th>Código estado</th>
-					<th>Descrição estado</th>
+					<th>Número</th>
+					<th>Observações</th>
+					<th>Código pessoa</th>
+					<th>Nome</th>
 					<th></th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 		<?php
-			$sql = 'SELECT c.id, c.descricao, c.id_estado, e.descricao as descricao_estado  
-					FROM cidades c 
-					INNER JOIN estados e ON c.id_estado = e.id';
+			$sql = 'SELECT pt.id, pt.nro_telefone, pt.descricao, pt.id_pessoa, p.nome  
+					FROM pessoas_telefones pt 
+					INNER JOIN pessoas p ON pt.id_pessoa = p.id';
 			$query = mysqli_query($con, $sql);
 
 			if (!$query) {
@@ -37,11 +38,12 @@
 		?>
 				<tr>
 					<td><?php echo $item['id']; ?></td>
+					<td><?php echo $item['nro_telefone']; ?></td>
 					<td><?php echo $item['descricao']; ?></td>
-					<td><?php echo $item['id_estado']; ?></td>
-					<td><?php echo $item['descricao_estado']; ?></td>
-					<td><a href="alterar_cidades.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
-					<td><a href="excluir_cidades_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
+					<td><?php echo $item['id_pessoa']; ?></td>
+					<td><?php echo $item['nome']; ?></td>
+					<td><a href="alterar_pessoas_telefones.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
+					<td><a href="excluir_pessoas_telefones_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
 				</tr>
 		<?php
 			}
