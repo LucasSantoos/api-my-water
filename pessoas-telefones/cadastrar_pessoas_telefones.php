@@ -5,12 +5,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Telefones</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
+		<br><br>
 		<form action="cadastrar_pessoas_telefones_db.php" method="POST">
 			
 			<label for="nro_telefone">Número</label><br>

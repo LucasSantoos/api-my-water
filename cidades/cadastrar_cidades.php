@@ -5,12 +5,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Cidades</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
+				<br><br>
+
 		<form action="cadastrar_cidades_db.php" method="POST">
 			<label for="descricao">Descrição</label><br>
 			<input type="text" name="descricao" id="descricao" maxlength="100"><br><br>

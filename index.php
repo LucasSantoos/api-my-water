@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Pessoas</title>
 	</head>
 	<body>

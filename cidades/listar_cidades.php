@@ -5,13 +5,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Cidades</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
-		<br><br><a href="cadastrar_cidades.php">Cadastrar</a>
+		<br><br><a class="btn-cadastrar" href="cadastrar_cidades.php">Cadastrar</a>
 		<table>
 			<thead>
 				<tr>
@@ -40,8 +41,8 @@
 					<td><?php echo $item['descricao']; ?></td>
 					<td><?php echo $item['id_estado']; ?></td>
 					<td><?php echo $item['descricao_estado']; ?></td>
-					<td><a href="alterar_cidades.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
-					<td><a href="excluir_cidades_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
+					<td><a class="btn-alterar" href="alterar_cidades.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
+					<td><a class="btn-excluir" href="excluir_cidades_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
 				</tr>
 		<?php
 			}

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(32, 17, 66);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-excluir {
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(202, 5, 5);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-alterar {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(230, 220, 88);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-cadastrar {
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(5, 112, 1);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+
+.btn:hover {
+    background-color: rgb(48, 21, 110);
+    padding: 11px;
+}
+
+table {
+    margin: 20px auto 0 auto;
+    border: 1px solid black;
+}
+
+td {
+    margin: 20px auto;
+    padding: 12px 2px;
+    border: 1px solid black;
+}
+
+th {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: 3px solid black;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+input[type=submit] {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 62, 112);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 0px;
+    font-size: 11pt;
+}
+
+input[type=submit]:hover {
+    padding: 12px;
+    background-color: rgb(4, 89, 158);
+}

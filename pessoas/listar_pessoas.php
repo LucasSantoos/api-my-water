@@ -5,13 +5,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Pessoas</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
-		<br><br><a href="cadastrar_pessoas.php">Cadastrar</a>
+		<br><br><a class="btn-cadastrar" href="cadastrar_pessoas.php">Cadastrar</a>
 		<table>
 			<thead>
 				<tr>
@@ -39,8 +40,8 @@
 					<td><?php echo $item['cpf']; ?></td>
 					<td><?php echo $item['dt_nasc']; ?></td>
 					<td><?php echo $item['tipo_pessoa']; ?></td>
-					<td><a href="alterar_pessoas.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
-					<td><a href="excluir_pessoas_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
+					<td><a class="btn-alterar" href="alterar_pessoas.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
+					<td><a class="btn-excluir" href="excluir_pessoas_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
 				</tr>
 		<?php
 			}

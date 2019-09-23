@@ -4,12 +4,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Pessoas</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
+				<br><br>
+
 		<form action="cadastrar_pessoas_db.php" method="POST">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="100"><br><br>

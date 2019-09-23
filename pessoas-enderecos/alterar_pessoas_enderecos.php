@@ -11,12 +11,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Endereços</title>
 	</head>
 	<body>
 		<?php
 			include('../menu.php');
 		?>
+				<br><br>
+
 		<form action="alterar_pessoas_enderecos_db.php" method="POST">
 			<input type="hidden" name="id" value="<?php echo $item['ID']; ?>">
 			Código: <?php echo $item['ID']; ?><br><br>
