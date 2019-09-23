@@ -1,6 +1,6 @@
 <?php
-	include('validar.php');
-	include('conexao.php');
+	include('../validar.php');
+	include('../conexao.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<?php
-			include('menu.php');
+			include('../menu.php');
 		?>
 		<br><br><a href="cadastrar_pessoas.php">Cadastrar</a>
 		<table>

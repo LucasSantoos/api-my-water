@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Faculdades ESUCRI</title>
+		<title>Pessoas</title>
 	</head>
 	<body>
 		<?php
