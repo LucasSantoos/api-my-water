@@ -9,18 +9,18 @@
 	<body>
 		<?php
 			$descricao = $_POST['descricao'];
-			$id_pais = $_POST['id_pais'];
+			$id_estado = $_POST['id_estado'];
 
-			$sql = "INSERT INTO estados (descricao, id_pais) VALUES ('$descricao', $id_pais)";
+			$sql = "INSERT INTO cidades (descricao, id_estado) VALUES ('$descricao', $id_estado)";
 			
 			$query = mysqli_query($con, $sql);
 
 			if($query) {
 				$codigo = mysqli_insert_id($con);
 				$qtd = mysqli_affected_rows($con);
-				echo "Estadp cadastrado com sucesso! Código: $codigo Itens modificados: $qtd";
+				echo "Cidade cadastrada com sucesso! Código: $codigo Itens modificados: $qtd";
 			} else {
-				echo "Não foi possível cadastrar o estado! Erro: " . mysqli_error($con);
+				echo "Não foi possível cadastrar a cidade! Erro: " . mysqli_error($con);
 			}
 		?>
 	</body>
