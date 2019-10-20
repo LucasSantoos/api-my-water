@@ -24,8 +24,6 @@
 				$sql = "INSERT INTO pessoas (nome, cpf, dt_nasc, tipo_pessoa) 
 				VALUES ('$nome', '$cpf', '$dt_nasc', '$tipo_pessoa')";	
 			}
-			
-			var_dump($sql);
 
 			$query = mysqli_query($con, $sql);
 			if($query) {
