@@ -7,13 +7,18 @@
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Pessoas</title>
 	</head>
-	<body>
+		<body>
 		<?php
 			include('../menu.php');
 		?>
-				<br><br>
+		<br><br>
+		Usuário:
+		<?php
+			echo $_SESSION['usuario']['LOGIN'];
+		?>
+		<br><br>
 
-		<form action="cadastrar_pessoas_db.php" method="POST">
+		<form action="cadastrar_pessoas_db.php" method="POST" enctype="multipart/form-data">
 			<label for="nome">Nome</label><br>
 			<input type="text" name="nome" id="nome" maxlength="100"><br><br>
 			
@@ -30,6 +35,12 @@
 				<option value="juridica">Juridica</option>
 			</select>
 
+			<br>
+			<label for="foto-perfil">Foto de perfil</label>
+			<br>
+			<input id="foto-perfil" type="file" name="arquivo">
+			<br>
+			
 			<input type="submit" name="enviar" value="Enviar">
 		</form>
 	</body>

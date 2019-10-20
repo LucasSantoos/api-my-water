@@ -8,10 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Estados</title>
 	</head>
-	<body>
+		<body>
 		<?php
 			include('../menu.php');
 		?>
+		<br><br>
+		Usuário:
+		<?php
+			echo $_SESSION['usuario']['LOGIN'];
+		?>
+		<br><br>
 				<br><br>
 
 		<form action="cadastrar_estados_db.php" method="POST">

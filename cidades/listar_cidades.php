@@ -8,10 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Cidades</title>
 	</head>
-	<body>
+		<body>
 		<?php
 			include('../menu.php');
 		?>
+		<br><br>
+		Usuário:
+		<?php
+			echo $_SESSION['usuario']['LOGIN'];
+		?>
+		<br><br>
 		<br><br><a class="btn-cadastrar" href="cadastrar_cidades.php">Cadastrar</a>
 		<table>
 			<thead>

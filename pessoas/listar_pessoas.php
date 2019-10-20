@@ -8,10 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<title>Pessoas</title>
 	</head>
-	<body>
+		<body>
 		<?php
 			include('../menu.php');
 		?>
+		<br><br>
+		Usuário:
+		<?php
+			echo $_SESSION['usuario']['LOGIN'];
+		?>
+		<br><br>
 		<br><br><a class="btn-cadastrar" href="cadastrar_pessoas.php">Cadastrar</a>
 		<table>
 			<thead>
@@ -27,7 +33,7 @@
 			</thead>
 			<tbody>
 		<?php
-			$sql = 'SELECT id, nome, cpf, dt_nasc, tipo_pessoa FROM pessoas';
+			$sql = 'SELECT id, nome, cpf, dt_nasc, tipo_pessoa, imagem FROM pessoas';
 			$query = mysqli_query($con, $sql);
 			if (!$query) {
 				echo 'Erro: ' . mysqli_error($con);
@@ -43,7 +49,8 @@
 					<td><a class="btn-alterar" href="alterar_pessoas.php?id=<?php echo $item['id']; ?>">Alterar</a></td>
 					<td><a class="btn-excluir" href="excluir_pessoas_db.php?id=<?php echo $item['id']; ?>">Excluir</a></td>
 				</tr>
-		<?php
+					<img src="<?php echo $item['imagem']?>">
+				<?php
 			}
 		?>
 			</tbody>

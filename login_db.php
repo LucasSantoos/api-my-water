@@ -17,6 +17,5 @@
 		header('Location: index.php?erro=1');
 	}
 	
-	
 	mysqli_close($con);
 ?>
