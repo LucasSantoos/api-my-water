@@ -16,9 +16,7 @@
 			$query = mysqli_query($con, $sql);
 
 			if($query) {
-				$codigo = mysqli_insert_id($con);
-				$qtd = mysqli_affected_rows($con);
-				echo "Estadp cadastrado com sucesso! Código: $codigo Itens modificados: $qtd";
+				header('Location: listar_estados.php');
 			} else {
 				echo "Não foi possível cadastrar o estado! Erro: " . mysqli_error($con);
 			}

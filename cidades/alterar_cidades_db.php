@@ -16,7 +16,7 @@
 			
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Cidade alterada com sucesso!";
+				header('Location: listar_cidades.php');
 			} else {
 				echo "Não foi possível alterar a cidade! Erro: " . mysqli_error($con);
 			}

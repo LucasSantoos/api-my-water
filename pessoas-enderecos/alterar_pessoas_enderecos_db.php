@@ -21,7 +21,7 @@
 						
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Endereço alterada com sucesso!";
+				header('Location: listar_pessoas_enderecos.php');
 			} else {
 				echo "Não foi possível alterar a endereço! Erro: " . mysqli_error($con);
 			}

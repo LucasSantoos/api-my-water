@@ -18,7 +18,7 @@
 						
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Telefone alterada com sucesso!";
+				header('Location: listar_pessoas_telefones.php');
 			} else {
 				echo "Não foi possível alterar a telefone! Erro: " . mysqli_error($con);
 			}

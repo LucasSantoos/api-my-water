@@ -18,7 +18,7 @@
 			
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Pessoa alterada com sucesso!";
+				header('Location: listar_pessoas.php');
 			} else {
 				echo "Não foi possível alterar a pessoa! Erro: " . mysqli_error($con);
 			}

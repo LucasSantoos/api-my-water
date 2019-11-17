@@ -15,7 +15,7 @@
 			
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Pais alterado com sucesso!";
+				header('Location: listar_paises.php');
 			} else {
 				echo "Não foi possível alterar o pais! Erro: " . mysqli_error($con);
 			}

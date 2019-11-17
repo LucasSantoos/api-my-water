@@ -16,7 +16,7 @@
 			
 			$query = mysqli_query($con, $sql);
 			if($query) {
-				echo "Estado alterado com sucesso!";
+				header('Location: listar_estados.php');
 			} else {
 				echo "Não foi possível alterar o estado! Erro: " . mysqli_error($con);
 			}

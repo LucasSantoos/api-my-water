@@ -25,7 +25,7 @@
 			<label for="numero">Número</label><br>
 			<input type="text" name="numero" id="numero" maxlength="11"><br><br>
 
-			<label for="descricao">Observações</label><br>
+			<label for="descricao">Logradouro</label><br>
 			<input type="text" name="descricao" id="descricao" maxlength="100"><br><br>
 
 			<label for="bairro">Bairro</label><br>

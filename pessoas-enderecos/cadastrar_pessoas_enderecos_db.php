@@ -20,9 +20,7 @@
 			$query = mysqli_query($con, $sql);
 
 			if($query) {
-				$codigo = mysqli_insert_id($con);
-				$qtd = mysqli_affected_rows($con);
-				echo "Endereço cadastrada com sucesso! Código: $codigo Itens modificados: $qtd";
+				header('Location: listar_pessoas_enderecos.php');
 			} else {
 				echo "Não foi possível cadastrar a endereço! Erro: " . mysqli_error($con);
 			}

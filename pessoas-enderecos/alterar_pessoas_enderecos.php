@@ -33,7 +33,7 @@
 			<label for="numero">Número</label><br>
 			<input type="text" name="numero" id="numero" maxlength="100" value="<?php echo $item['NUMERO']; ?>"><br><br>
 
-			<label for="descricao">Observações</label><br>
+			<label for="descricao">Logradouro</label><br>
 			<input type="text" name="descricao" id="descricao" maxlength="100" value="<?php echo $item['DESCRICAO']; ?>"><br><br>
 
 			<label for="bairro">Bairro</label><br>
