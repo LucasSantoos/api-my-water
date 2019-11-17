@@ -31,6 +31,19 @@
 						});
 					}
 				});
+				$('.buscar').on('click', function () {
+					var nome = $('#nome').val();
+					$.ajax({
+						url: 'buscar_cidades_db.php',
+						method: 'POST',
+						data: {
+							nome: nome
+						}
+					}).done(function (html) {
+						$('#cidades tbody').empty();
+						$('#cidades tbody').html(html);
+					});
+				});
 			});
 		</script>
 	</head>
@@ -44,8 +57,10 @@
 			echo $_SESSION['usuario']['LOGIN'];
 		?>
 		<br><br>
+		<input type="text" name="nome" id="nome">
+		<input type="button" class="buscar" name="buscar" id="buscar" value="Buscar">
 		<br><br><a class="btn-cadastrar" href="cadastrar_cidades.php">Cadastrar</a>
-		<table>
+		<table id="cidades">
 			<thead>
 				<tr>
 					<th>Código</th>

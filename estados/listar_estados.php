@@ -31,6 +31,19 @@
 						});
 					}
 				});
+				$('.buscar').on('click', function () {
+					var nome = $('#nome').val();
+					$.ajax({
+						url: 'buscar_estados_db.php',
+						method: 'POST',
+						data: {
+							nome: nome
+						}
+					}).done(function (html) {
+						$('#estados tbody').empty();
+						$('#estados tbody').html(html);
+					});
+				});
 			});
 		</script>
 	</head>
@@ -44,8 +57,10 @@
 			echo $_SESSION['usuario']['LOGIN'];
 		?>
 		<br><br>
+		<input type="text" name="nome" id="nome">
+		<input type="button" class="buscar" name="buscar" id="buscar" value="Buscar">
 		<br><br><a class="btn-cadastrar" href="cadastrar_estados.php">Cadastrar</a>
-		<table>
+		<table id="estados">
 			<thead>
 				<tr>
 					<th>Código</th>

@@ -31,8 +31,8 @@
 			<label for="tipo_pessoa">Tipo de pessoa</label><br>
 			<select id="tipo_pessoa" name="tipo_pessoa">
 				<option value="" >Selecione um tipo</option>
-				<option value="fisica">Física</option>
-				<option value="juridica">Juridica</option>
+				<option value="cliente">Cliente</option>
+				<option value="funcionario">Funcionário</option>
 			</select>
 
 			<br>

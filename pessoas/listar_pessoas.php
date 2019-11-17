@@ -31,6 +31,19 @@
 						});
 					}
 				});
+				$('.buscar').on('click', function () {
+					var nome = $('#nome').val();
+					$.ajax({
+						url: 'buscar_pessoas_db.php',
+						method: 'POST',
+						data: {
+							nome: nome
+						}
+					}).done(function (html) {
+						$('#pessoas tbody').empty();
+						$('#pessoas tbody').html(html);
+					});
+				});
 			});
 		</script>
 	</head>
@@ -44,8 +57,10 @@
 			echo $_SESSION['usuario']['LOGIN'];
 		?>
 		<br><br>
+		<input type="text" name="nome" id="nome">
+		<input type="button" class="buscar" name="buscar" id="buscar" value="Buscar">
 		<br><br><a class="btn-cadastrar" href="cadastrar_pessoas.php">Cadastrar</a>
-		<table>
+		<table id="pessoas">
 			<thead>
 				<tr>
 					<th>Código</th>
